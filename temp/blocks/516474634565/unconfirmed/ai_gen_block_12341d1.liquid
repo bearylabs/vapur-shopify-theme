@@ -1,6 +1,649 @@
+{% doc %}
+  @prompt
+    a vertical grit for features like free shipping, and secure payment, i mean horiziontal
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-features-grid-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    padding: {{ block.settings.padding_vertical }}px {{ block.settings.padding_horizontal }}px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-features-grid__list-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: row;
+    gap: {{ block.settings.item_spacing }}px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .ai-features-grid__item-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: {{ block.settings.icon_text_gap }}px;
+    padding: {{ block.settings.item_padding }}px;
+    background-color: {{ block.settings.item_background_color }};
+    border-radius: {{ block.settings.item_border_radius }}px;
+    border: {{ block.settings.item_border_thickness }}px solid {{ block.settings.item_border_color }};
+    flex: 1 1 auto;
+    min-width: 200px;
+  }
+
+  .ai-features-grid__icon-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: {{ block.settings.icon_color }};
+  }
+
+  .ai-features-grid__icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ai-features-grid__content-{{ ai_gen_id }} {
+    flex-grow: 1;
+  }
+
+  .ai-features-grid__title-{{ ai_gen_id }} {
+    margin: 0 0 4px 0;
+    font-size: {{ block.settings.title_font_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.title_color }};
+  }
+
+  .ai-features-grid__description-{{ ai_gen_id }} {
+    margin: 0;
+    font-size: {{ block.settings.description_font_size }}px;
+    color: {{ block.settings.description_color }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-features-grid-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-features-grid__list-{{ ai_gen_id }} {
+      flex-direction: column;
+    }
+
+    .ai-features-grid__item-{{ ai_gen_id }} {
+      min-width: 100%;
+    }
+  }
+{% endstyle %}
+
+<feature-grid-{{ ai_gen_id }}
+  class="ai-features-grid-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <ul class="ai-features-grid__list-{{ ai_gen_id }}">
+    {% if block.settings.feature_1_enabled %}
+      <li class="ai-features-grid__item-{{ ai_gen_id }}">
+        <div class="ai-features-grid__icon-{{ ai_gen_id }}">
+          {% if block.settings.feature_1_icon == 'shipping' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          {% elsif block.settings.feature_1_icon == 'lock' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          {% elsif block.settings.feature_1_icon == 'return' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="1 4 1 10 7 10"></polyline>
+              <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+            </svg>
+          {% elsif block.settings.feature_1_icon == 'support' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          {% elsif block.settings.feature_1_icon == 'check' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          {% endif %}
+        </div>
+        <div class="ai-features-grid__content-{{ ai_gen_id }}">
+          {% if block.settings.feature_1_title != blank %}
+            <h3 class="ai-features-grid__title-{{ ai_gen_id }}">{{ block.settings.feature_1_title }}</h3>
+          {% endif %}
+          {% if block.settings.feature_1_description != blank %}
+            <p class="ai-features-grid__description-{{ ai_gen_id }}">{{ block.settings.feature_1_description }}</p>
+          {% endif %}
+        </div>
+      </li>
+    {% endif %}
+
+    {% if block.settings.feature_2_enabled %}
+      <li class="ai-features-grid__item-{{ ai_gen_id }}">
+        <div class="ai-features-grid__icon-{{ ai_gen_id }}">
+          {% if block.settings.feature_2_icon == 'shipping' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          {% elsif block.settings.feature_2_icon == 'lock' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          {% elsif block.settings.feature_2_icon == 'return' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="1 4 1 10 7 10"></polyline>
+              <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+            </svg>
+          {% elsif block.settings.feature_2_icon == 'support' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          {% elsif block.settings.feature_2_icon == 'check' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          {% endif %}
+        </div>
+        <div class="ai-features-grid__content-{{ ai_gen_id }}">
+          {% if block.settings.feature_2_title != blank %}
+            <h3 class="ai-features-grid__title-{{ ai_gen_id }}">{{ block.settings.feature_2_title }}</h3>
+          {% endif %}
+          {% if block.settings.feature_2_description != blank %}
+            <p class="ai-features-grid__description-{{ ai_gen_id }}">{{ block.settings.feature_2_description }}</p>
+          {% endif %}
+        </div>
+      </li>
+    {% endif %}
+
+    {% if block.settings.feature_3_enabled %}
+      <li class="ai-features-grid__item-{{ ai_gen_id }}">
+        <div class="ai-features-grid__icon-{{ ai_gen_id }}">
+          {% if block.settings.feature_3_icon == 'shipping' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          {% elsif block.settings.feature_3_icon == 'lock' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          {% elsif block.settings.feature_3_icon == 'return' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="1 4 1 10 7 10"></polyline>
+              <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+            </svg>
+          {% elsif block.settings.feature_3_icon == 'support' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          {% elsif block.settings.feature_3_icon == 'check' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          {% endif %}
+        </div>
+        <div class="ai-features-grid__content-{{ ai_gen_id }}">
+          {% if block.settings.feature_3_title != blank %}
+            <h3 class="ai-features-grid__title-{{ ai_gen_id }}">{{ block.settings.feature_3_title }}</h3>
+          {% endif %}
+          {% if block.settings.feature_3_description != blank %}
+            <p class="ai-features-grid__description-{{ ai_gen_id }}">{{ block.settings.feature_3_description }}</p>
+          {% endif %}
+        </div>
+      </li>
+    {% endif %}
+
+    {% if block.settings.feature_4_enabled %}
+      <li class="ai-features-grid__item-{{ ai_gen_id }}">
+        <div class="ai-features-grid__icon-{{ ai_gen_id }}">
+          {% if block.settings.feature_4_icon == 'shipping' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          {% elsif block.settings.feature_4_icon == 'lock' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          {% elsif block.settings.feature_4_icon == 'return' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="1 4 1 10 7 10"></polyline>
+              <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+            </svg>
+          {% elsif block.settings.feature_4_icon == 'support' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          {% elsif block.settings.feature_4_icon == 'check' %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          {% endif %}
+        </div>
+        <div class="ai-features-grid__content-{{ ai_gen_id }}">
+          {% if block.settings.feature_4_title != blank %}
+            <h3 class="ai-features-grid__title-{{ ai_gen_id }}">{{ block.settings.feature_4_title }}</h3>
+          {% endif %}
+          {% if block.settings.feature_4_description != blank %}
+            <p class="ai-features-grid__description-{{ ai_gen_id }}">{{ block.settings.feature_4_description }}</p>
+          {% endif %}
+        </div>
+      </li>
+    {% endif %}
+  </ul>
+</feature-grid-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class FeatureGrid{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+    }
+
+    customElements.define('feature-grid-{{ ai_gen_id }}', FeatureGrid{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Features grid",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "label": "Vertical padding",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "label": "Horizontal padding",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "item_spacing",
+      "label": "Space between items",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "icon_text_gap",
+      "label": "Icon to text gap",
+      "min": 8,
+      "max": 32,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "item_background_color",
+      "label": "Item background",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Container border radius",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "item_border_radius",
+      "label": "Item border radius",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "item_padding",
+      "label": "Item padding",
+      "min": 8,
+      "max": 32,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "item_border_thickness",
+      "label": "Item border thickness",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "item_border_color",
+      "label": "Item border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Icon size",
+      "min": 20,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "label": "Title font size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "description_font_size",
+      "label": "Description font size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Feature 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_1_enabled",
+      "label": "Enable feature 1",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "feature_1_icon",
+      "label": "Icon",
+      "options": [
+        {
+          "value": "shipping",
+          "label": "Shipping"
+        },
+        {
+          "value": "lock",
+          "label": "Secure payment"
+        },
+        {
+          "value": "return",
+          "label": "Returns"
+        },
+        {
+          "value": "support",
+          "label": "Support"
+        },
+        {
+          "value": "check",
+          "label": "Check"
+        }
+      ],
+      "default": "shipping"
+    },
+    {
+      "type": "text",
+      "id": "feature_1_title",
+      "label": "Title",
+      "default": "Free shipping"
+    },
+    {
+      "type": "text",
+      "id": "feature_1_description",
+      "label": "Description",
+      "default": "On orders over €50"
+    },
+    {
+      "type": "header",
+      "content": "Feature 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_2_enabled",
+      "label": "Enable feature 2",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "feature_2_icon",
+      "label": "Icon",
+      "options": [
+        {
+          "value": "shipping",
+          "label": "Shipping"
+        },
+        {
+          "value": "lock",
+          "label": "Secure payment"
+        },
+        {
+          "value": "return",
+          "label": "Returns"
+        },
+        {
+          "value": "support",
+          "label": "Support"
+        },
+        {
+          "value": "check",
+          "label": "Check"
+        }
+      ],
+      "default": "lock"
+    },
+    {
+      "type": "text",
+      "id": "feature_2_title",
+      "label": "Title",
+      "default": "Secure payment"
+    },
+    {
+      "type": "text",
+      "id": "feature_2_description",
+      "label": "Description",
+      "default": "100% secure transactions"
+    },
+    {
+      "type": "header",
+      "content": "Feature 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_3_enabled",
+      "label": "Enable feature 3",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "feature_3_icon",
+      "label": "Icon",
+      "options": [
+        {
+          "value": "shipping",
+          "label": "Shipping"
+        },
+        {
+          "value": "lock",
+          "label": "Secure payment"
+        },
+        {
+          "value": "return",
+          "label": "Returns"
+        },
+        {
+          "value": "support",
+          "label": "Support"
+        },
+        {
+          "value": "check",
+          "label": "Check"
+        }
+      ],
+      "default": "return"
+    },
+    {
+      "type": "text",
+      "id": "feature_3_title",
+      "label": "Title",
+      "default": "Easy returns"
+    },
+    {
+      "type": "text",
+      "id": "feature_3_description",
+      "label": "Description",
+      "default": "30-day return policy"
+    },
+    {
+      "type": "header",
+      "content": "Feature 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_4_enabled",
+      "label": "Enable feature 4",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "feature_4_icon",
+      "label": "Icon",
+      "options": [
+        {
+          "value": "shipping",
+          "label": "Shipping"
+        },
+        {
+          "value": "lock",
+          "label": "Secure payment"
+        },
+        {
+          "value": "return",
+          "label": "Returns"
+        },
+        {
+          "value": "support",
+          "label": "Support"
+        },
+        {
+          "value": "check",
+          "label": "Check"
+        }
+      ],
+      "default": "support"
+    },
+    {
+      "type": "text",
+      "id": "feature_4_title",
+      "label": "Title",
+      "default": "24/7 support"
+    },
+    {
+      "type": "text",
+      "id": "feature_4_description",
+      "label": "Description",
+      "default": "Dedicated customer service"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Features grid"
+    }
+  ]
+}
 {% endschema %}
