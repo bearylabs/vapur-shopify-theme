@@ -30,7 +30,7 @@
           "type": "button",
           "settings": {
             "button_label": "Jetzt entdecken",
-            "button_link": "shopify://collections/all",
+            "button_link": "shopify://collections/matratzen",
             "button_style_secondary": false
           }
         }
