@@ -138,96 +138,40 @@
         "padding_bottom": 36
       }
     },
-    "multirow_GMNCYh": {
-      "type": "multirow",
-      "blocks": {
-        "row_M7cFtr": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/u4316265929_httpss.mj.runir9_0h8SZig_imagine_prompt_luxury_ma_a8fa6023-ef7d-4199-a710-5a011a70740c_3.png",
-            "caption": "premium",
-            "heading": "VAPUR Matratzen",
-            "text": "<p><strong>Erholsamer Schlaf beginnt mit der richtigen Matratze.</strong><br/><br/>Die VAPUR Matratzen verbinden <strong>ergonomische Unterstützung</strong>, hochwertige Materialien und ein angenehmes Schlafklima – für spürbar besseren Schlaf.</p>",
-            "button_label": "Matrazen ansehen",
-            "button_link": "shopify://collections/matratzen"
-          }
-        },
-        "row_Vr6B6D": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/PHOTO-2026-03-04-10-44-02_d51c2f43-daed-4a51-9b02-c08e57f92943.jpg",
-            "caption": "Premium",
-            "heading": "VAPUR Kissen",
-            "text": "<p><strong>Das richtige Kissen entlastet Kopf und Nacken.</strong><br/><br/>Die VAPUR Kissen sorgen für <strong>ergonomische Unterstützung</strong> und passen sich deiner Schlafposition für maximalen Komfort an.</p>",
-            "button_label": "Kissen ansehen",
-            "button_link": "shopify://collections/kissen"
-          }
-        },
-        "row_6y3p8M": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_10._Marz_2026_21_02_07.png",
-            "caption": "Premium",
-            "heading": "VAPUR Topper",
-            "text": "<p><strong>Mehr Komfort für deine Matratze.</strong><br/><br/>Die VAPUR Topper bieten <strong>zusätzliche Druckentlastung</strong> und verbessern spürbar den Liegekomfort deiner Schlafunterlage.</p>",
-            "button_label": "Topper ansehen",
-            "button_link": "shopify://collections/topper"
-          }
-        }
-      },
-      "block_order": [
-        "row_M7cFtr",
-        "row_Vr6B6D",
-        "row_6y3p8M"
-      ],
-      "name": "t:sections.multirow.presets.name",
-      "settings": {
-        "image_height": "small",
-        "desktop_image_width": "medium",
-        "image_layout": "alternate-left",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "primary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "multirow_custom_Kq9nLp": {
       "type": "multirow-custom",
       "blocks": {
         "row_nyVdGd": {
           "type": "row",
           "settings": {
-            "caption": "Caption",
-            "heading": "Heading",
-            "text": "<p>Describe the feature or benefit here.</p>",
-            "link_label": "fafafaf",
-            "link": "shopify://products/vapur-tfk"
+            "image": "shopify://shop_images/Adobe_Express_-_file.png",
+            "caption": "Premium",
+            "heading": "VAPUR Matratzen",
+            "text": "<p><strong>Erholsamer Schlaf beginnt mit der richtigen Matratze.</strong><br/><br/>Die VAPUR Matratzen verbinden <strong>ergonomische Unterstützung</strong>, hochwertige Materialien und ein angenehmes Schlafklima – für spürbar besseren Schlaf.</p>",
+            "link_label": "Matratzen ansehen",
+            "link": "shopify://collections/matratzen"
           }
         },
         "row_9rHEjE": {
           "type": "row",
           "settings": {
-            "caption": "Caption",
-            "heading": "Heading",
-            "text": "<p>Describe the feature or benefit here.</p>",
-            "link_label": "Learn more",
-            "link": ""
+            "image": "shopify://shop_images/PHOTO-2026-03-04-10-44-02_d51c2f43-daed-4a51-9b02-c08e57f92943.jpg",
+            "caption": "Premium",
+            "heading": "VAPUR Kissen",
+            "text": "<p><strong>Das richtige Kissen entlastet Kopf und Nacken.</strong><br/><br/>Die VAPUR Kissen sorgen für <strong>ergonomische Unterstützung</strong> und passen sich deiner Schlafposition für maximalen Komfort an.</p>",
+            "link_label": "Kissen ansehen",
+            "link": "shopify://collections/kissen"
           }
         },
         "row_nrkpAg": {
           "type": "row",
           "settings": {
-            "caption": "Caption",
-            "heading": "Heading",
-            "text": "<p>Describe the feature or benefit here.</p>",
-            "link_label": "Learn more",
-            "link": ""
+            "image": "shopify://shop_images/ChatGPT_Image_10._Marz_2026_21_02_07.png",
+            "caption": "Premium",
+            "heading": "VAPUR Topper",
+            "text": "<p><strong>Mehr Komfort für deine Matratze.</strong><br/><br/>Die VAPUR Topper bieten <strong>zusätzliche Druckentlastung</strong> und verbessern spürbar den Liegekomfort deiner Schlafunterlage.</p>",
+            "link_label": "Topper ansehen",
+            "link": "shopify://collections/topper"
           }
         }
       },
@@ -258,7 +202,6 @@
     "image_with_text_pitedb",
     "1773252492a631e2f6",
     "collection_list_QeHMzy",
-    "multirow_GMNCYh",
     "multirow_custom_Kq9nLp"
   ]
 }
