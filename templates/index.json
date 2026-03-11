@@ -15,21 +15,21 @@
         "heading_aRQtCH": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Schlaf auf einem neuen Niveau.</strong>",
+            "heading": "<strong>Besser schlafen mit VAPUR</strong>",
             "heading_size": "h1"
           }
         },
         "text_Ur7HaU": {
           "type": "text",
           "settings": {
-            "text": "<p>Hochwertige Matratzen, Kissen und Bettwaren aus sorgfältig ausgewählten Materialien. Entwickelt für maximalen Komfort, optimale Unterstützung und ein Schlafgefühl, das du jede Nacht spürst.</p>",
+            "text": "<p>Premium Matratzen für besseren Schlaf – jede Nacht.</p>",
             "text_style": "body"
           }
         },
         "button_WGWbBg": {
           "type": "button",
           "settings": {
-            "button_label": "Jetzt besser schlafen",
+            "button_label": "Jetzt entdecken",
             "button_link": "shopify://collections/all",
             "button_style_secondary": false
           }
