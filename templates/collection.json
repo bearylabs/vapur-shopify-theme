@@ -39,7 +39,7 @@
     }
   },
   "order": [
-    "banner",
-    "product-grid"
+    "product-grid",
+    "banner"
   ]
 }
