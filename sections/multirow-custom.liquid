@@ -1,4 +1,5 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'section-multirow-custom.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -97,7 +98,23 @@
     class="multirow__link"
   >
     {{ block.settings.link_label | escape }}
-    <span class="multirow__arrow">→</span>
+    <span class="multirow__arrow">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="14"
+    height="14"
+    viewBox="0 0 16 16"
+    fill="none"
+  >
+    <path
+      d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</span>
   </a>
 {%- endif -%}
             </div>
