@@ -4,6 +4,13 @@
   gap: 6px;
   font-weight: 500;
   text-decoration: none;
+  color: inherit;
+}
+
+.multirow__link:visited,
+.multirow__link:hover,
+.multirow__link:active {
+  color: inherit;
 }
 
 .multirow__arrow {
