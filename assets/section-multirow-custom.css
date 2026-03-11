@@ -14,7 +14,13 @@
 }
 
 .multirow__arrow {
+  display: inline-flex;
   transition: transform 0.2s ease;
+}
+
+.multirow__arrow svg {
+  width: 14px;
+  height: 14px;
 }
 
 .multirow__link:hover .multirow__arrow {
