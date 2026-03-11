@@ -123,6 +123,7 @@
         "featured_collection_REBMWq",
         "featured_collection_aNf4tG"
       ],
+      "disabled": true,
       "name": "t:sections.collection-list.presets.name",
       "settings": {
         "title": "Die VAPUR Schlafkollektion",
@@ -136,11 +137,71 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "multirow_GMNCYh": {
+      "type": "multirow",
+      "blocks": {
+        "row_M7cFtr": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Adobe_Express_-_file.png",
+            "caption": "premium",
+            "heading": "VAPUR Matratzen",
+            "text": "<p><strong>Erholsamer Schlaf beginnt mit der richtigen Matratze.</strong><br/><br/>Die VAPUR Matratzen verbinden <strong>ergonomische Unterstützung</strong>, hochwertige Materialien und ein angenehmes Schlafklima – für spürbar besseren Schlaf.</p>",
+            "button_label": "Matrazen ansehen",
+            "button_link": "shopify://collections/matratzen"
+          }
+        },
+        "row_Vr6B6D": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/PHOTO-2026-03-04-10-44-02_d51c2f43-daed-4a51-9b02-c08e57f92943.jpg",
+            "caption": "Premium",
+            "heading": "VAPUR Kissen",
+            "text": "<p><strong>Das richtige Kissen entlastet Kopf und Nacken.</strong><br/><br/>Die VAPUR Kissen sorgen für <strong>ergonomische Unterstützung</strong> und passen sich deiner Schlafposition für maximalen Komfort an.</p>",
+            "button_label": "Kissen ansehen",
+            "button_link": "shopify://collections/kissen"
+          }
+        },
+        "row_6y3p8M": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_10._Marz_2026_21_02_07.png",
+            "caption": "Premium",
+            "heading": "VAPUR Topper",
+            "text": "<p><strong>Mehr Komfort für deine Matratze.</strong><br/><br/>Die VAPUR Topper bieten <strong>zusätzliche Druckentlastung</strong> und verbessern spürbar den Liegekomfort deiner Schlafunterlage.</p>",
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_M7cFtr",
+        "row_Vr6B6D",
+        "row_6y3p8M"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_with_text_pitedb",
     "1773252492a631e2f6",
-    "collection_list_QeHMzy"
+    "collection_list_QeHMzy",
+    "multirow_GMNCYh"
   ]
 }
