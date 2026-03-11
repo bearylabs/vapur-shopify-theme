@@ -37,6 +37,9 @@
     },
     "header": {
       "type": "header",
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.header--middle-left {grid-template-columns: unset !important; } .header__inline-menu {display: flex; position: absolute; left: 50%; transform: translateX(-50%); }}"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
