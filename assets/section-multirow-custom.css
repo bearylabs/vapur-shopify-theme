@@ -1,0 +1,15 @@
+.multirow__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.multirow__arrow {
+  transition: transform 0.2s ease;
+}
+
+.multirow__link:hover .multirow__arrow {
+  transform: translateX(4px);
+}
