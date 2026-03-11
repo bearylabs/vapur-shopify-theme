@@ -87,18 +87,19 @@
               {%- if block.settings.text -%}
                 <div class="image-with-text__text rte {{ section.settings.text_style }}">{{ block.settings.text }}</div>
               {%- endif -%}
-              {%- if block.settings.button_label != blank -%}
-                <a
-                  {% if block.settings.button_link == blank %}
-                    role="link" aria-disabled="true"
-                  {% else %}
-                    href="{{ block.settings.button_link }}"
-                  {% endif %}
-                  class="button button--{{ section.settings.button_style }}"
-                >
-                  {{ block.settings.button_label | escape }}
-                </a>
-              {%- endif -%}
+              {%- if block.settings.link_label != blank -%}
+  <a
+    {% if block.settings.link == blank %}
+      role="link" aria-disabled="true"
+    {% else %}
+      href="{{ block.settings.link }}"
+    {% endif %}
+    class="multirow__link"
+  >
+    {{ block.settings.link_label | escape }}
+    <span class="multirow__arrow">→</span>
+  </a>
+{%- endif -%}
             </div>
           </div>
         </div>
@@ -274,8 +275,17 @@
         { "type": "text", "id": "caption", "label": "Caption", "default": "Caption" },
         { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Heading" },
         { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Describe the feature or benefit here.</p>" },
-        { "type": "text", "id": "button_label", "label": "Button label", "default": "Learn more" },
-        { "type": "url", "id": "button_link", "label": "Button link" }
+        {
+  "type": "text",
+  "id": "link_label",
+  "label": "Link text",
+  "default": "Learn more"
+},
+{
+  "type": "url",
+  "id": "link",
+  "label": "Link"
+}
       ]
     }
   ],
