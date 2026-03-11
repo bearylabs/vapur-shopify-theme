@@ -9,9 +9,9 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/vapur_logo_light.svg",
+    "logo": "{{ shop.brand.logo }}",
     "logo_width": 90,
-    "favicon": "shopify://shop_images/favicon_light.svg",
+    "favicon": "{{ shop.brand.square_logo }}",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
