@@ -182,7 +182,7 @@
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
-        "image_height": "medium",
+        "image_height": "small",
         "desktop_image_width": "medium",
         "image_layout": "alternate-left",
         "heading_size": "h1",
