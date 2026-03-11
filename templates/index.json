@@ -60,49 +60,36 @@
     "1773252492a631e2f6": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_12341d1_R4ynf3": {
-          "type": "ai_gen_block_12341d1",
+        "ai_gen_block_a76e2de_drWk8r": {
+          "type": "ai_gen_block_a76e2de",
           "settings": {
-            "desktop_width_percent": 100,
-            "padding_vertical": 20,
-            "padding_horizontal": 20,
-            "item_spacing": 16,
-            "icon_text_gap": 16,
-            "background_color": "#f9f9f9",
-            "item_background_color": "#f9f9f9",
-            "icon_color": "#121212",
-            "title_color": "#121212",
-            "description_color": "#666666",
-            "border_radius": 0,
-            "item_border_radius": 8,
-            "item_padding": 16,
-            "item_border_thickness": 0,
-            "item_border_color": "#e0e0e0",
-            "icon_size": 32,
-            "title_font_size": 16,
-            "description_font_size": 14,
-            "feature_1_enabled": true,
-            "feature_1_icon": "shipping",
             "feature_1_title": "Kostenloser Versand",
-            "feature_1_description": "Für alle Bestellungen",
-            "feature_2_enabled": true,
-            "feature_2_icon": "lock",
+            "feature_1_description": "Ab 50€ Bestellwert",
             "feature_2_title": "Sichere Bezahlung",
-            "feature_2_description": "100% sichere Transaktionen",
-            "feature_3_enabled": true,
-            "feature_3_icon": "return",
-            "feature_3_title": "Einfache Returen",
-            "feature_3_description": "30-Tage Rückgaberecht",
-            "feature_4_enabled": false,
-            "feature_4_icon": "support",
-            "feature_4_title": "24/7 support",
-            "feature_4_description": "Dedicated customer service"
+            "feature_2_description": "SSL-verschlüsselt",
+            "feature_3_title": "Einfache Retouren",
+            "feature_3_description": "30 Tage Rückgaberecht",
+            "desktop_width_percent": 100,
+            "max_width": 1200,
+            "gap": 40,
+            "gap_mobile": 30,
+            "item_gap": 15,
+            "padding_top": 0,
+            "padding_bottom": 40,
+            "padding_horizontal": 20,
+            "padding_top_mobile": 30,
+            "padding_bottom_mobile": 30,
+            "padding_horizontal_mobile": 15,
+            "color_scheme": "scheme-2",
+            "icon_size": 40,
+            "title_size": 16,
+            "description_size": 14
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_12341d1_R4ynf3"
+        "ai_gen_block_a76e2de_drWk8r"
       ],
       "settings": {}
     },
